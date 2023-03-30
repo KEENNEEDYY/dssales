@@ -1,5 +1,4 @@
 import '../styles.css';
-import { ReactComponent as AvatarIcon } from '../../../assets/avatar-icon.svg';
 import React from 'react';
 
 type Props = {

@@ -8,7 +8,7 @@ import './styles.css';
 function SalesSummary() {
   return (
     <div className="sales-summary-container">
-      <SalesSummaryCard icon={<DoneIcon />} label="Média" value={534.0} />
+      <SalesSummaryCard icon={<DoneIcon />} label="Média" value={5340.0} />
       <SalesSummaryCard icon={<SyncIcon />} label="Quantidade" value={4434} />
       <SalesSummaryCard icon={<BarChartIcon />} label="Mínima" value={434.0} />
       <SalesSummaryCard icon={<AvatarIcon />} label="Máxima" value={3434.0} />

@@ -30,13 +30,13 @@ function SalesSummary({ filterData }: Props) {
         setSummary(response.data);
       })
       .catch(() => {
-        console.error('Error to fetch sales by date');
+        console.error('Error to fetch sales summary');
       });
   }, [params]);
 
   return (
     <div className="sales-summary-container">
-      <SalesSummaryCard icon={<DoneIcon />} label="Média" value={summary?.avg.toFixed(2)} />
+      <SalesSummaryCard icon={<DoneIcon />} label="Média" value={summary?.avg?.toFixed(2)} />
       <SalesSummaryCard icon={<SyncIcon />} label="Quantidade" value={summary?.count} />
       <SalesSummaryCard icon={<BarChartIcon />} label="Mínima" value={summary?.min} />
       <SalesSummaryCard icon={<AvatarIcon />} label="Máxima" value={summary?.max} />

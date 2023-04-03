@@ -8,9 +8,15 @@ type Props = {
   filterData?: FilterData;
 };
 
+const exptraParams = {
+  page: 0,
+  size: 12,
+  sort: 'date,desc'
+};
+
 function SalesTable({ filterData }: Props) {
   const [sales, setSales] = useState<SpringPage<Sale>>();
-  const params = useMemo(() => buildFilterParams(filterData), [filterData]);
+  const params = useMemo(() => buildFilterParams(filterData, exptraParams), [filterData]);
 
   useEffect(() => {
     makeRequest

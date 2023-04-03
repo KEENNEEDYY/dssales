@@ -37,3 +37,30 @@ export type PieChartConfig = {
   labels: string[];
   series: number[];
 };
+
+export type SalesResponse = {
+  content: Sale[];
+};
+
+export type SpringPage<T> = {
+  content: T[];
+  last: boolean;
+  totalElements: number;
+  totalPages: number;
+  size: number;
+  number: number;
+  first: boolean;
+  numberOfElements?: number;
+  empty: boolean;
+};
+
+export type Sale = {
+  id: number;
+  date: string;
+  volume: number;
+  total: number;
+  gender: Gender;
+  categoryName: string;
+  paymentMethod: string;
+  storeName: string;
+};
